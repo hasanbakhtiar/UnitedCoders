@@ -1,0 +1,35 @@
+/* h1{
+    color: darkslategrey;
+    font-size: 20px;
+}
+p{
+    background-color: darkslategray;
+    color: white; */
+    /* letter-spacing: 10px; */
+    /* font-weight: 400; */
+    /* font-style: italic; */
+    /* font-family: 'Courier New', Courier, monospace, sans-serif; */
+    /* line-height: 100px; */
+
+    
+/* } */
+
+/* li:nth-child(2n-1){
+    color: red;
+}
+p:nth-child(1){
+color: red;
+} */
+
+/* #myIdOne{
+    color: red;
+}
+
+#myIdTwo{
+    color: red;
+} */
+
+
+.myClass{
+    color: red;
+}

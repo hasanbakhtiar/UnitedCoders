@@ -1,0 +1,44 @@
+/* .main-box .box-one, .main-box .box-two{
+    height: 100px;
+    width: 100px;
+}
+
+.box-one{
+    background-color: red;
+}
+.box-two{
+    background-color: green;
+} */
+
+/* .box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+.box p{
+    color: green;
+} */
+
+
+
+.box-one,.box-two{
+    width: 100px;
+    height: 100px;
+}
+
+.box-one{
+    background-color: red;
+    /* margin-bottom: 50px; */
+    /* margin-right: 100px; */
+}
+
+.box-two{
+    background-color: green;
+    /* margin-top: 100px; */
+    /* margin-left: 100px; */
+    /* margin: 100px 100px 10px 50px; */
+    /* padding-right: 100px; */
+    /* padding: 10px 20px 50px 100px; */
+
+
+}
