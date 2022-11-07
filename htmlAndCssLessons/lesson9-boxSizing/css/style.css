@@ -19,7 +19,9 @@
     color: green;
 } */
 
-
+table{
+    background-color: red;
+}
 
 .box-one,.box-two{
     width: 100px;
