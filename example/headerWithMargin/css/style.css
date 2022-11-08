@@ -1,0 +1,12 @@
+header{
+    width: 100%;
+    height: 100px;
+    background-color: bisque;
+}
+
+header  *{
+    display: inline-block;
+}
+header nav ul li{
+    margin-left: 100px;
+}
