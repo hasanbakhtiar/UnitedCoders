@@ -1,17 +1,80 @@
 
-
-body{
+header{
     width: 100%;
-    height: 100vh;
+    height: 100px;
+    background-color: bisque;
     display: flex;
     align-items: center;
     justify-content: center;
+    ul{
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        .submenu{
+            
+            position: relative;
+            ul{
+                transition: 1s;
+                position: absolute;
+                top: 15px;
+                right: -64px;
+                width: 150px;
+                height: 200px;
+                background-color: #eee;
+                // display: none;
+                opacity: 0;
+                z-index: -1;
+                display: flex;
+                flex-direction: column;
+            }
+            &:hover{
+               ul{
+                opacity: 1;
+                z-index: 1;
+               }
+            }
+        }
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #000;
+                font-family: sans-serif;
+                font-weight: bolder;
+            }
+        }
+    }
 }
-.box{
-    width: 100px;
-    height: 100px;
+
+section{
+    width: 100%;
+    height: 90vh;
+    background-color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .box{
+    // width: 100px;
+    // height: 100px;
     // background: radial-gradient(circle, rgba(251,242,63,1) 0%, rgba(252,70,107,1) 100%);
-    background-color: red;
+    // background-color: red;
     // 0123456789ABCDEF
     // background-color: #3300ffb9;
     // background-color: hwb(4 19% 17% / 0.741);
@@ -29,4 +92,24 @@ body{
     // transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY());
     // transform: matrix(1, -0.3, 0, 1, 100, 100);
 
+// }
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    // transition-property: transform, background-color;
+    // transition-duration: 1s;
+    // transition-delay: 2s;
+    // transition: transform 2s, background-color 10s;
+    // transition: 1s;
+
+
+    &:hover{
+        transform: scale(2);
+        background-color: green;
+
+    }
 }
+

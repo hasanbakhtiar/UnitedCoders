@@ -1,13 +1,59 @@
-body {
+header {
   width: 100%;
-  height: 100vh;
+  height: 100px;
+  background-color: bisque;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+header ul {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+header ul .submenu {
+  position: relative;
+}
+header ul .submenu ul {
+  transition: 1s;
+  position: absolute;
+  top: 15px;
+  right: -64px;
+  width: 150px;
+  height: 200px;
+  background-color: #eee;
+  opacity: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+header ul .submenu:hover ul {
+  opacity: 1;
+  z-index: 1;
+}
+header ul li {
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+section {
+  width: 100%;
+  height: 90vh;
+  background-color: #333;
 }
 
 .box {
   width: 100px;
   height: 100px;
   background-color: red;
+}
+.box:hover {
+  transform: scale(2);
+  background-color: green;
 }/*# sourceMappingURL=style.css.map */
