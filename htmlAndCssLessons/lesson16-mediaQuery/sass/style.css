@@ -1,0 +1,61 @@
+header {
+  width: 100%;
+  height: 100px;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+header nav {
+  width: 70%;
+  display: flex;
+}
+header nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+header button {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  header {
+    background-color: green;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav button {
+    display: block;
+  }
+}
+.con-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.con-box .box {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  border: 2px solid #000;
+  margin: 3px;
+}
+
+@media (max-width: 700px) {
+  .con-box {
+    flex-wrap: wrap;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .con-box {
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=style.css.map */
