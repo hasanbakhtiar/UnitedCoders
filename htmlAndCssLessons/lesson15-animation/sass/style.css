@@ -1,0 +1,8 @@
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  -webkit-clip-path: polygon(18% 27%, 91% 27%, 79% 51%);
+          clip-path: polygon(18% 27%, 91% 27%, 79% 51%);
+}/*# sourceMappingURL=style.css.map */
