@@ -1,0 +1,56 @@
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  background-image: url("https://rockstheme.com/rocks/aievari-live/img/slider/h1.jpg");
+  background-attachment: fixed;
+}
+.wrapper .wrapper-bg {
+  height: 100vh;
+  background-color: rgba(4, 23, 46, 0.7);
+}
+.wrapper .wrapper-bg * {
+  color: #fff;
+}
+.wrapper .wrapper-bg * i {
+  color: orange;
+}
+.wrapper .wrapper-bg #top-nav {
+  background-color: rgba(4, 23, 46, 0.7);
+}
+.wrapper .wrapper-bg .text-con {
+  height: 90vh;
+}
+
+.card {
+  overflow: hidden;
+}
+.card .icon-con {
+  display: block;
+  height: 70px;
+  width: 100%;
+}
+.card .icon-con i {
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+.base {
+  position: absolute;
+  right: -52px;
+  top: 24px;
+  background: #1AA15F;
+  width: 180px;
+  text-align: center;
+  height: 30px;
+  line-height: 28px;
+  color: #fff;
+  transform: rotate(45deg);
+}/*# sourceMappingURL=style.css.map */
