@@ -47,7 +47,7 @@
 //     console.log(infoArr[count]);
 // }
 
-const infoArr = ['table','chair','lamp'];
+// const infoArr = ['table','chair','lamp'];
 
 
 // infoArr.push('new value');
@@ -68,34 +68,46 @@ const infoArr = ['table','chair','lamp'];
 // }
 
 
-const carList = [
-    {
-        brand:"BMW",
-        model:"X5",
-        year:2022,
-    },
-    {
-        brand:"Mercedes",
-        model:"s500",
-        year:2002,
-    },
-    {
-        brand:"audi",
-        model:"a5",
-        year:2020,
-    }
-]
+// const carList = [
+//     {
+//         brand:"BMW",
+//         model:"X5",
+//         year:2022,
+//     },
+//     {
+//         brand:"Mercedes",
+//         model:"s500",
+//         year:2002,
+//     },
+//     {
+//         brand:"audi",
+//         model:"a5",
+//         year:2020,
+//     }
+// ]
 
-for (let index = 0; index < carList.length; index++) {
-    console.log(carList[index].brand+"-"+carList[index].model);
+// for (let index = 0; index < carList.length; index++) {
+//     console.log(carList[index].brand+"-"+carList[index].model);
     
-}
+// }
 
 
-const category = prompt();
+// const category = prompt();
 
 // console.log(infoObj.brand);
 
 
 
+
+
+// try{
+//     throw "everything is ok"
+//     console.loag('Hello');
+    
+// }catch(err){
+//     console.log(err);
+//         // console.log('Something is wrong');
+// }finally{
+//     console.log("im running everytime ");
+// }
 
