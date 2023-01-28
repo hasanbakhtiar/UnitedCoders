@@ -23,3 +23,13 @@ form.onsubmit=(e)=>{
   }
 }
 
+btn.onclick=()=>{
+    if (input[1].attributes[0].value === 'password') {
+        input[1].attributes[0].value = 'text';
+        document.querySelector('i').className = 'fa-solid fa-eye-slash'
+    }else{
+        input[1].attributes[0].value = 'password';
+        document.querySelector('i').className = 'fa-solid fa-eye'
+    }
+}
+
