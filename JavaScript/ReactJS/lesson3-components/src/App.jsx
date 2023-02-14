@@ -25,12 +25,16 @@
 import  { Component } from 'react'
 import List from './components/List'
 import Nav from './components/Nav'
+import Product from './pages/Product'
 
 class App extends Component {
   render() {
     return (
       <>
       <Nav/>
+      <div className="container">
+      <Product />
+      </div>
       {/* <List listOne="pen" listTwo="book"/>
       <List listOne="laptop" listTwo="pc"/>
       <List listOne="phone" listTwo="kindle"/> */}

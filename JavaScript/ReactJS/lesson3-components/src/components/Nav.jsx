@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-
+import cardata from '../data/car'
 
 class Dropdown extends Component{
     render(){
         return(
             <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+             {this.props.carbrand}
             </a>
             <ul className="dropdown-menu">
-              <li><a className="dropdown-item" href="#">Action</a></li>
-              <li><a className="dropdown-item" href="#">Another action</a></li>
+              <li><a className="dropdown-item" href="#">{this.props.carmodelOne}</a></li>
+              <li><a className="dropdown-item" href="#">{this.props.carmodelTwo}</a></li>
            
             </ul>
           </li>
@@ -38,10 +38,13 @@ export class Nav extends Component {
           <a className="nav-link" href="#">About</a>
         </li>
 
-       <Dropdown />
-       <Dropdown />
-       <Dropdown />
-   
+        {cardata.map((item,count)=>{
+          return  <Dropdown  key={count}
+          carbrand ={item.brand} 
+          carmodelOne={item.modelOne} 
+          carmodelTwo={item.modelTwo}/>
+        })}
+
       </ul>
      
     </div>
