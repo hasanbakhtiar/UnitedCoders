@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [characters,setCharacters] = useState([]);
@@ -21,6 +22,7 @@ const Home = () => {
             <div className='col-4'>
                 <img src={item.image} alt="" />
                 <h4>{item.name}</h4>
+                <Link to={`/${item.id}`} className='btn btn-warning'>read more</Link>
             </div>
         ))}
     </div>
