@@ -1,10 +1,9 @@
 import React from 'react'
-import AppUseImperativeHandleElpachoErnandes from './components/AppUseImperativeHandleElpachoErnandes'
-import AppUseLayoutEffect from './components/AppUseLayoutEffect'
+import AppUseMemo from './components/AppUseMemo'
 
 const App = () => {
   return (
-    <div><AppUseImperativeHandleElpachoErnandes/></div>
+    <div><AppUseMemo/></div>
   )
 }
 
