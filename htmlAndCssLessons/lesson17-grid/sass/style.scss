@@ -1,54 +1,13 @@
-// h1{
-//     color: red;
-// }
-
-// h1::after{
-//     content: "new value ";
-// }
-
-// .box{
-//     position: relative;
-//     width: 100px;
-//     height: 100px;
-//     background-color: red;
-// }
-
-// .box::after{
-//     position: absolute;
-//     top: 0;
-//     transition: 1s;
-//     left: 0;
-//     content: "";
-//     display: block;
-//     width: 100px;
-//     height: 0px;
-//     background-color: orange;
-// }
-
-
-// .box:hover::after{
-//     height: 100px;
-// }
-
-
-.flex-container {
-    display: flex;
-    background-color: #333;
-  }
-  
-  .flex-container>div {
-    background-color: DodgerBlue;
-    color: white;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    height: 75px;
-    font-size: 30px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 100px;
-  }
-
-  .flex-container>div:nth-of-type(2){
-    flex-shrink: 3
-  }
+.con{
+  display: grid;
+  // grid-template-columns: auto auto auto auto auto;
+  // grid-template-rows: 300px 200px;
+  grid: 150px  150px 150px/ auto auto;
+  row-gap: 10px;
+  column-gap: 30px;
+      .box{
+        background-color: black;
+        color: #fff;
+        font-size: 50px;
+      }  
+}

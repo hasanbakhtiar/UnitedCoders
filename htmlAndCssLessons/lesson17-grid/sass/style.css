@@ -1,21 +1,12 @@
-.flex-container {
-  display: flex;
-  background-color: #333;
+.con {
+  display: grid;
+  grid: 150px 150px 150px/auto auto;
+  row-gap: 10px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
-
-.flex-container > div {
-  background-color: DodgerBlue;
-  color: white;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  height: 75px;
-  font-size: 30px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 100px;
-}
-
-.flex-container > div:nth-of-type(2) {
-  flex-shrink: 3;
+.con .box {
+  background-color: black;
+  color: #fff;
+  font-size: 50px;
 }/*# sourceMappingURL=style.css.map */
