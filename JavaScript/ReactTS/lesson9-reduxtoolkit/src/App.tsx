@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useAppDispatch, useAppSelector } from './store';
-import { add } from './features/todoSlice';
+import { add, remove } from './features/todoSlice';
 
 const App:React.FC = () => {
     const [title,setTitle] = useState<string>("");
@@ -20,7 +20,9 @@ const App:React.FC = () => {
         </form>
         <ol>
             {selectTodo.map((i:any)=>{
-                return <li key={i.id}>{i.title}</li> 
+                return <li key={i.id}>{i.title}<button onClick={()=>{
+                    dispatch(remove(i.id))
+                }}>X</button></li> 
             })}
         </ol>
     </div>
