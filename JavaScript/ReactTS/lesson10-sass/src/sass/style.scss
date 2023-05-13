@@ -1,0 +1,77 @@
+// @import 'mixin';
+
+// // :root{
+// //     --qara:#000;
+// // }
+// $qara:#000;
+// $mystyle:sans-serif;
+// $mycount:20px;
+
+// li{
+//    @if($mycount>25px){
+//     @include colorfull();
+//     background-color: green;
+//    }@else{
+//     background-color: yellow;
+//     font-size: 20px + 10px;
+//    }
+// }
+
+// $mycount:40px;
+// h1{
+//     // color: var(--qara);
+//    @if($mycount ==20px){
+//     color: $qara;
+//     font-family: $mystyle;
+//    }@else if($mycount == 21px){
+//         color: aqua
+//    }@else if($mycount > 30px){
+//     font-size: 70px
+//    }
+//    @else{
+//     @include colorfull();
+//    }
+// }
+
+// $base-color: #000;
+
+// @for $i from 6 through 10 {
+//   li:nth-child(3n + #{$i}) {
+//     background-color: lighten($base-color, $i * 10%);
+//   }
+// }
+
+// $sizes: 40px, 50px, 80px;
+
+// @each $size in $sizes {
+//   .icon-#{$size} {
+//     height: $size;
+//     width: $size;
+//     background-color: red;
+//   }
+// }
+
+// @use "sass:math";
+
+// @function scale-below($value, $base, $ratio: 1.618) {
+//   @while $value > $base {
+//     $value: math.div($value, $ratio);
+//   }
+//   @return $value;
+// }
+
+// $normal-font-size: 16px;
+// sup {
+//   font-size: scale-below(10px, 10px);
+// }
+// @use "sass:math";
+// @function myfontsize($firstsize, $valuesize:30) {
+//   $data: ($firstsize * $valuesize);
+//   @return $data;
+  
+// }
+// h1{
+//     font-size: myfontsize(20px);
+// }
+
+// @debug myfontsize(20px);
