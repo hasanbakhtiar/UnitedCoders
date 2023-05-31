@@ -19,10 +19,7 @@ const Home = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button onClick={()=>{
-        const changedata = JSON.stringify(productdata);
-        localStorage.setItem('data',changedata);
-      }}>test</button>
+
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import ReactDOM from "react-dom/client";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
@@ -11,7 +11,7 @@ const store = configureStore();
 
 
 {products.map((item:any)=>(
-  store.dispatch(addproduct({id:item.id,title:item.title,price:item.price,photo:item.photo,stock:item.stock}))
+  store.dispatch(addproduct({id:item.id,titleaz:item.titleaz,titleen:item.titleen,price:item.price,photo:item.photo,stock:item.stock}))
 ))}
 
 console.log(store.getState());

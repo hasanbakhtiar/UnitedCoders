@@ -1,26 +1,35 @@
+import { useContext } from "react";
 import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useCart } from "react-use-cart";
+import { LangContext } from "../lang/LangContext";
 
 interface PropType {
   title: string;
   price: number;
   photo: string;
-  alldata:any
+  alldata: any;
 }
-const SingleProductCard = ({ title, price, photo,alldata }: PropType) => {
-    const {addItem} = useCart();
+const SingleProductCard = ({  alldata }: PropType) => {
+  const { addItem } = useCart();
+  const [lang] = useContext(LangContext);
   return (
     <Col sm={6} md={4}>
       <Card>
-        <Card.Img variant="top" height={300} src={photo} alt={title} />
+        <Card.Img variant="top" height={300} src={alldata.photo} alt={alldata.titleen} />
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>{price} $</Card.Text>
-          <Button onClick={()=>{
-            addItem(alldata)
-          }} variant="primary">Add to card</Button>
+          <Card.Title>{lang === 'en'? alldata.titleen:alldata.titleaz}</Card.Title>
+          <Card.Text>{alldata.price} $</Card.Text>
+          <Button
+            onClick={() => {
+              addItem(alldata);
+              alert("product add to cart");
+            }}
+            variant="primary" className={alldata.stock?"":"disabled"}
+          >
+            Add to card
+          </Button>
         </Card.Body>
       </Card>
     </Col>
