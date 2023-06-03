@@ -27,17 +27,20 @@ const Header = () => {
             </LinkContainer>
           </Nav>
        <LinkContainer to="/cart">
-       <button type="button" className="btn btn-primary position-relative">
+       <button type="button" className="btn btn-primary position-relative mx-3">
         <i className="fa-solid fa-cart-shopping" />
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
           {totalItems}
         </span>
       </button>
        </LinkContainer>
-       <Button className="ms-3" variant="warning" onClick={()=>{
+ 
+      <LinkContainer to="/wishlist">
+       <Button variant="danger"><i className="fa-solid fa-heart"></i></Button>
+      </LinkContainer>
+      <Button className="ms-3" variant="warning" onClick={()=>{
         lang === 'en'? setLang("az"): setLang('en');
        }}>{lang==="en"?"AZ":"EN"}</Button>
-
         </Navbar.Collapse>
       </Container>
     </Navbar>

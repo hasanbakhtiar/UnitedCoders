@@ -8,7 +8,7 @@ import Cart from "../pages/Cart";
 import Dashboard from "../pages/admin/Dashboard";
 import { LangProvider } from "../lang/LangContext";
 import AddProduct from "../pages/admin/AddProduct";
-import { useId } from "react";
+import WishList from "../pages/WishList";
 
 const App = () => {
   return (
@@ -21,6 +21,7 @@ const App = () => {
           <Route path="/" element={<Home />}></Route>
           <Route path="/products" element={<ProductsPage />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/wishlist" element={<WishList />}></Route>
           <Route path="/admin" element={<Dashboard />}></Route>
           <Route path="/admin/add" element={<AddProduct />}></Route>
         </Routes>

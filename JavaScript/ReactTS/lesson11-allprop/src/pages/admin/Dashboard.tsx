@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button, Table } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
+import {  useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap';
+import { LangContext } from '../../lang/LangContext';
 
 const Dashboard = () => {
 
  
     
 const productData:any = useSelector(product=>product);
-    const dispatch = useDispatch();
+    const [lang] = useContext(LangContext);
   return (
     <>
     
@@ -26,11 +27,11 @@ const productData:any = useSelector(product=>product);
       </tr>
     </thead>
     <tbody>
-    {productData.map((item:any,i:number)=>(
+    {productData.product.map((item:any,i:number)=>(
      <tr key={i}>
      <td>{i+1}</td>
      <td><img width={100} src={item.photo} alt="" /></td>
-     <td>{item.title}</td>
+     <td>{lang === 'en'? item.titleen:item.titleaz}</td>
      <td>{item.stock ? <span className="badge text-bg-success">in stock</span>
 :<span className="badge text-bg-danger">stock out</span>
 }</td>

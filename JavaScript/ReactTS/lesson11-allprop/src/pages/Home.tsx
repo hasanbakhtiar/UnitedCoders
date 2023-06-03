@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <Swiper spaceBetween={0} slidesPerView={1}>
-        {productdata.map((a: any) => (
+        {productdata.product.map((a: any) => (
           <SwiperSlide key={a.id}>
             <img
               src={a.photo}
