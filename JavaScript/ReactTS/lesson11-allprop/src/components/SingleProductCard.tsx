@@ -1,12 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useCart } from "react-use-cart";
 import { LangContext } from "../lang/LangContext";
-import { useDispatch, useSelector } from "react-redux";
-import { addWish, removeWish } from "../manager/action/wishAction";
-
+import { useDispatch } from "react-redux";
+import { addWish } from "../manager/action/wishAction";
+import AOS from 'aos';
 interface PropType {
   title: string;
   price: number;
@@ -14,14 +14,15 @@ interface PropType {
   alldata: any;
 }
 const SingleProductCard = ({ alldata }: PropType) => {
+  useEffect(()=>{
+    AOS.init();
+  },[])
   const { addItem } = useCart();
-  const [fill, setFill] = useState("regular");
   const [lang] = useContext(LangContext);
   const dispatch = useDispatch();
-  const data: any = useSelector((state) => state);
   return (
     <Col sm={6} md={4}>
-      <Card>
+      <Card data-aos="flip-left">
         <Card.Img
           variant="top"
           height={300}
@@ -47,24 +48,11 @@ const SingleProductCard = ({ alldata }: PropType) => {
             className="mx-3"
             variant="warning"
             onClick={() => {
-              if (fill === "regular") {
-                dispatch(addWish(alldata));
-                const localWish: any = JSON.stringify(data.wish);
-                localStorage.setItem("wish", localWish);
-                setFill("solid");
-                localStorage.setItem('fill','solid');
-                console.log(data.wish);
-
-              } else {
-                dispatch(removeWish(alldata));
-                setFill("regular");
-                localStorage.setItem('fill','regular');
-                console.log(data.wish);
-                
-              }
+              dispatch(addWish(alldata));
+              alert("product add to wishlist");
             }}
           >
-            <i className={`fa-${fill} fa-heart`}></i>
+            <i className="fa-regular fa-heart"></i>
           </Button>
         </Card.Body>
       </Card>

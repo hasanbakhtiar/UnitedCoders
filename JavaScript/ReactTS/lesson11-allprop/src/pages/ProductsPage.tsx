@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 
 const ProductsPage = () => {
     const productdata:any = useSelector(state=>state);
+    
   return (
     <>
         <h1 className='text-center my-5'>Asus Shop</h1>

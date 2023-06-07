@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { Button, Table } from 'react-bootstrap'
-import {  useSelector } from 'react-redux'
+import {  useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap';
 import { LangContext } from '../../lang/LangContext';
+import { removeProduct } from '../../manager/action/productAction';
 
 const Dashboard = () => {
 
@@ -10,6 +11,7 @@ const Dashboard = () => {
     
 const productData:any = useSelector(product=>product);
     const [lang] = useContext(LangContext);
+    const dispatch = useDispatch();
   return (
     <>
     
@@ -36,7 +38,7 @@ const productData:any = useSelector(product=>product);
 :<span className="badge text-bg-danger">stock out</span>
 }</td>
      <td><LinkContainer to={`/dashboard/edit/${item.id}`}><Button variant='warning'>Edit</Button></LinkContainer></td>
-     <td><Button variant='danger'>Delete</Button></td>
+     <td><Button variant='danger' onClick={()=>{dispatch(removeProduct({id:item.id}))}}>Delete</Button></td>
    </tr>
     ))}
  

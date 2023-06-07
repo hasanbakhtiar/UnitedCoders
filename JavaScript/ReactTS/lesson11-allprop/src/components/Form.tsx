@@ -48,7 +48,7 @@ const BlogForm = ({onFormSubmit}:any) => {
             <Form.Control type="number" value={price} placeholder="Enter price" onChange={e=>setPrice(e.target.value)}/>
           </Form.Group>
             <div className="form-check my-3">
-            <input className="form-check-input" type="checkbox" checked onChange={e=>setStock(e.target.checked)}  id="flexCheckDefault" />
+            <input className="form-check-input" type="checkbox"  onChange={e=>setStock(e.target.checked)}  id="flexCheckDefault" />
             <label className="form-check-label" htmlFor="flexCheckDefault">
                 Stock
             </label>

@@ -6,9 +6,11 @@ import Navbar from "react-bootstrap/Navbar";
 import { LinkContainer } from "react-router-bootstrap";
 import { useCart } from "react-use-cart";
 import { LangContext } from "../lang/LangContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [lang,setLang] = useContext(LangContext);
+  const data:any = useSelector(a=>a);
   const {totalItems} = useCart();
   return (
     <Navbar bg="dark" expand="lg" className="navbar-dark">
@@ -36,11 +38,17 @@ const Header = () => {
        </LinkContainer>
  
       <LinkContainer to="/wishlist">
-       <Button variant="danger"><i className="fa-solid fa-heart"></i></Button>
+       <button type="button" className="btn btn-danger border position-relative mx-3">
+       <i className="fa-solid fa-heart"></i>
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+          {data.wish.length}
+        </span>
+      </button>
       </LinkContainer>
       <Button className="ms-3" variant="warning" onClick={()=>{
         lang === 'en'? setLang("az"): setLang('en');
        }}>{lang==="en"?"AZ":"EN"}</Button>
+       <LinkContainer to="/admin"><Button variant="outline-light ms-3">Admin</Button></LinkContainer>
         </Navbar.Collapse>
       </Container>
     </Navbar>
