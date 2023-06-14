@@ -12,17 +12,20 @@ const WishList = () => {
   const { addItem } = useCart();
   useEffect(()=>{
     Aos.init();
+    
   },[])
+  const c:any = localStorage.getItem('wish');
+  const a:any  = JSON.parse(c)
   return (
     <Row>
-      {data.wish.length === 0 ? (
+      {a === null ? (
         <img
           className="text-center"
           src="https://i.pinimg.com/originals/f6/e4/64/f6e464230662e7fa4c6a4afb92631aed.png"
           alt="err"
         />
       ) : (
-        data.wish.map((item: any) => {
+        a.map((item: any) => {
           return (
             <Col sm={12} md={4} data-aos="flip-left">
             <div className="card">
@@ -37,7 +40,10 @@ const WishList = () => {
                 alert('product add to cart')}} className="btn btn-primary me-3">
                   Add to cart
                 </button>
-                <button onClick={()=>{dispatch(removeWish({id:item.id}))}} className="btn btn-danger">
+                <button onClick={()=>{
+                  
+           
+                  dispatch(removeWish({id:item.id}))}} className="btn btn-danger">
                   Delete
                 </button>
               </div>

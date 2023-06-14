@@ -48,6 +48,7 @@ const SingleProductCard = ({ alldata }: PropType) => {
             className="mx-3"
             variant="warning"
             onClick={() => {
+        
               dispatch(addWish(alldata));
               alert("product add to wishlist");
             }}
