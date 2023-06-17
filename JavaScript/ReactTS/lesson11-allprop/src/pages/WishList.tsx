@@ -1,5 +1,5 @@
 
-import { Col, Row } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { removeWish } from "../manager/action/wishAction";
 import { useCart } from "react-use-cart";
@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 
 const WishList = () => {
-  const data: any = useSelector((a) => a);
+  const data: any = useSelector((a:any) => a);
   const dispatch = useDispatch();
   const { addItem } = useCart();
   useEffect(()=>{
@@ -18,6 +18,7 @@ const WishList = () => {
   const a:any  = JSON.parse(c)
   return (
     <Row>
+      <Button variant="danger my-4"  onClick={()=>{localStorage.removeItem('wish')}}>Clear Wishlist</Button>
       {a === null ? (
         <img
           className="text-center"
@@ -27,7 +28,7 @@ const WishList = () => {
       ) : (
         a.map((item: any) => {
           return (
-            <Col sm={12} md={4} data-aos="flip-left">
+            <Col sm={12} md={4} data-aos="flip-left" key={item.id}>
             <div className="card">
               <img src={item.photo} className="card-img-top" alt="..." />
               <div className="card-body">
@@ -36,7 +37,9 @@ const WishList = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <button onClick={()=>{addItem(item);
+                <button onClick={()=>{
+                  
+                  addItem(item);
                 alert('product add to cart')}} className="btn btn-primary me-3">
                   Add to cart
                 </button>

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -12,6 +12,10 @@ const Header = () => {
   const [lang,setLang] = useContext(LangContext);
   const data:any = useSelector(a=>a);
   const {totalItems} = useCart();
+  useEffect(()=>{
+    console.log(data.wish.length);
+    
+  },[])
   return (
     <Navbar bg="dark" expand="lg" className="navbar-dark">
       <Container>

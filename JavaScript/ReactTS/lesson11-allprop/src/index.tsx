@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import ReactDOM from "react-dom/client";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 const store = configureStore();
 
 const MyProd = () => {
+
   return (
     <>
       {products.map((item: any) =>

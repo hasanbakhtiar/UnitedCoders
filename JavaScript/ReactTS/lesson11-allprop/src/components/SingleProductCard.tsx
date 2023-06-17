@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useCart } from "react-use-cart";
 import { LangContext } from "../lang/LangContext";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addWish } from "../manager/action/wishAction";
 import AOS from 'aos';
 interface PropType {
@@ -20,6 +20,7 @@ const SingleProductCard = ({ alldata }: PropType) => {
   const { addItem } = useCart();
   const [lang] = useContext(LangContext);
   const dispatch = useDispatch();
+  const a:any = useSelector((b:any)=>b.wish);
   return (
     <Col sm={6} md={4}>
       <Card data-aos="flip-left">
@@ -48,7 +49,7 @@ const SingleProductCard = ({ alldata }: PropType) => {
             className="mx-3"
             variant="warning"
             onClick={() => {
-        
+              
               dispatch(addWish(alldata));
               alert("product add to wishlist");
             }}
